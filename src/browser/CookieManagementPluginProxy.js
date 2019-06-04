@@ -4,8 +4,13 @@ var CookieManagementPlugin = {
         successCallback();
     },
     remove: function (successCallback, errorCallback, options) {
-        console.log(options);
-        // console.debug('removing cookie ' + cookieName + ' on domain ' + domain + ' (browser platform not supported)');
+        /**
+         * options[0] - domain
+         * options[1] - cookieName
+         */
+
+        console.debug('removing cookie ' + options[1] + ' on domain ' + options[0] + ' (browser platform not supported)');
+
         successCallback();
     }
 };
