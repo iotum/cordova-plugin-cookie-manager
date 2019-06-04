@@ -5,7 +5,8 @@ module.exports = {
         exec(successCallback, errorCallback, 'CookieManagementPlugin', 'flush', []);
     },
 
-    remove: function (domain, cookieName, successCallback, errorCallback) {
-        exec(successCallback, errorCallback, 'CookieManagementPlugin', 'remove', [domain, cookieName]);
+    remove: function (successCallback, errorCallback, options) {
+        console.log(options);
+        exec(successCallback, errorCallback, 'CookieManagementPlugin', 'remove', []);
     }
 };
