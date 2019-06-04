@@ -2,7 +2,6 @@
     "name": "cordova-plugin-cookie-manager",
     "version": "1.0.0",
     "description": "Cordova plugin to flush and remove cookies on Android platform. This is necessary to workaround the sync process.",
-    "types": "./types/index.d.ts",
     "bugs": {
         "url": "https://github.com/4sh/cordova-plugin-cookie-manager/issues"
     },
