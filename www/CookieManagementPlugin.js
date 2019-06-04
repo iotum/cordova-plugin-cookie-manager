@@ -1,5 +1,11 @@
 var exec = require('cordova/exec');
 
-exports.flush = function(arg0, success, error) {
-  exec(success, error, 'CookieManagementPlugin', 'flush', [arg0]);
-}
+module.exports = {
+    flush: function (successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'CookieManagementPlugin', 'flush', []);
+    },
+
+    remove: function (domain, cookieName, successCallback, errorCallback) {
+        exec(successCallback, errorCallback, 'CookieManagementPlugin', 'remove', [domain, cookieName]);
+    }
+};
