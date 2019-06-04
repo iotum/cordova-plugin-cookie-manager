@@ -18,5 +18,5 @@ However, there are two pitfall this plugins try to fix by adding:
 
 ### Using this plugin ###
 
-    window.cordova.plugins.CookieManagementPlugin.flush();
-    window.cordova.plugins.CookieManagementPlugin.remove('cookieName');
+    cookieManager.remove('https://domain.com', 'cookieName');
+    cookieManager.flush();
