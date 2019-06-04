@@ -1,4 +1,4 @@
-package cordovaPluginCookieManager;
+package plugin.cookiemanagement;
 
 import android.os.Build.VERSION;
 import android.webkit.CookieManager;

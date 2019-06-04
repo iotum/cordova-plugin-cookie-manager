@@ -11,11 +11,11 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="CookieManagementPlugin">
-                <param name="android-package" value="cordovaPluginCookieManager.CookieManagementPlugin"/>
+                <param name="android-package" value="plugin.cookiemanagement"/>
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/CookieManagementPlugin.java" target-dir="src/cordova-plugin-cookie-manager/CookieManagementPlugin"/>
+        <source-file src="src/android/CookieManagementPlugin.java" target-dir="src/plugin/cookiemanagement/CookieManagementPlugin"/>
     </platform>
 
     <platform name="ios">
