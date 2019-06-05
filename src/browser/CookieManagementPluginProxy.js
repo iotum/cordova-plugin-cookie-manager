@@ -1,9 +1,17 @@
 var CookieManagementPlugin = {
-    flush: function () {
+    flush: function (successCallback, errorCallback) {
         console.debug('flushing cookie (browser platform not supported)');
+        successCallback();
     },
-    remove: function (domain, cookieName) {
-        console.debug('removing cookie ' + cookieName + ' on domain ' + domain + ' (browser platform not supported)');
+    remove: function (successCallback, errorCallback, options) {
+        /**
+         * options[0] - domain
+         * options[1] - cookieName
+         */
+
+        console.debug('removing cookie ' + options[1] + ' on domain ' + options[0] + ' (browser platform not supported)');
+
+        successCallback();
     }
 };
 

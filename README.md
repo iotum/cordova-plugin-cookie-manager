@@ -28,7 +28,7 @@ However, there are two pitfall this plugins try to fix by adding:
 
 ```
 document.addEventListener('deviceready', () => {
-    cookieManager.remove('https://domain.com', 'cookieName');
+    cookieManager.remove(successCallback, errorCallback, domain, cookieName);
     cookieManager.flush();
 });
 ```

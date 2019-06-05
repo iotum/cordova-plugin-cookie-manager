@@ -1,4 +1,4 @@
-package cordovaPluginCookieManager;
+package plugin.cookiemanagement;
 
 import android.os.Build.VERSION;
 import android.webkit.CookieManager;
@@ -21,12 +21,11 @@ public class CookieManagementPlugin extends CordovaPlugin {
 
             /**
              * args[]
-             * args[0] - app
-             * args[1] - domain
-             * args[2] - cookieName
+             * args[0] - domain
+             * args[1] - cookieName
              */
 
-            this.remove(args.getString(1), args.getString(2), callbackContext);
+            this.remove(args.getString(0), args.getString(1), callbackContext);
             return true;
         }
 
