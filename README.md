@@ -1,6 +1,6 @@
-### Cookie Manager for Android ###
+### Cookie Manager for Android and iOS ###
 
-This plugins allows you to flush cookies in Android, moving them to persistent memory. 
+This plugins allows you to flush cookies in Android and iOS, moving them to persistent memory. 
 
 ### Supported platforms
 
@@ -8,7 +8,7 @@ This plugins allows you to flush cookies in Android, moving them to persistent m
 * iOS
 * Browser
 
-Works on iOS and browser but does nothing (calling any methods won't raise an error).
+Works on browser but does nothing (calling any methods won't raise an error).
 
 ### Why this is needed?
 
@@ -18,6 +18,12 @@ Android uses `CookieManager` to synchronize cookies between Webview and its nati
 However, there are two pitfall this plugins try to fix by adding:
 * A `flush` method: cookies are not written immediately by the `CookieManager` which may lead to unwanted state (= cookies not up-to-date) if you leave your app before sync. https://developer.android.com/reference/android/webkit/CookieManager.html#flush() 
 * A `remove` method: `CookieManager#setCookie` ignores cookie that has already expired. This is inconsistent with how webviews and browsers work: a cookie with a past expiry date should be removed.
+
+The same thing happen on iOS, the WkWebView use his own storage : `httpCookieStore`.
+This storage is sync to the `sharedHTTPCookieStorage` in `NSHTTPCookieStorage` (but not immediately).
+The implementation is slightly different :
+* The `flush` method: copy all cookies from the `httpCookieStore` to the `sharedHTTPCookieStorage`
+* The `remove` method remove the cookie on the `sharedHTTPCookieStorage`
  
  
 ### Installation ###
