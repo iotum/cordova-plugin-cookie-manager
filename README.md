@@ -34,7 +34,7 @@ The implementation is slightly different :
 
 ```
 document.addEventListener('deviceready', () => {
-    cookieManager.remove(successCallback, errorCallback, domain, cookieName);
-    cookieManager.flush();
+    window.cordova.plugins.CookieManagementPlugin.remove(successCallback, errorCallback, domain, cookieName);
+    window.cordova.plugins.CookieManagementPlugin.flush();
 });
 ```
