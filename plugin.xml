@@ -5,7 +5,7 @@
     <description>Better cookie management for Android</description>
 
     <js-module name="CookieManagementPlugin" src="www/CookieManagementPlugin.js">
-        <clobbers target="cookieManager"/>
+        <clobbers target="cordova.plugins.CookieManagementPlugin"/>
     </js-module>
 
     <platform name="android">
